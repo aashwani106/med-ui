@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Search, Phone, Menu, X } from 'lucide-react';
+import mainLogo from '../assets/main-logo.png';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Navbar() {
             <div className="w-full bg-white py-1 px-4 md:px-16 flex items-center justify-between">
                 {/* Logo Section */}
                 <div className="flex items-center">
-                    <img src="/src/assets/main-logo.png" alt="MediMarket Logo" className="h-10 w-auto object-contain" />
+                    <img src={mainLogo} alt="MediMarket Logo" className="h-10 w-auto object-contain" />
                 </div>
 
                 {/* Navigation Links - Desktop */}
