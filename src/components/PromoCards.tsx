@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight } from 'lucide-react';
 import garlicOil from '../assets/cards/garlic-oil.png';
 import frame9 from '../assets/cards/frame-9.png';

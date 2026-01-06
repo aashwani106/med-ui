@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import frame9 from '../assets/cards/frame-9.png';
 import luisBin from '../assets/cards/luis-bin.png';
+import FadeIn from './FadeIn';
 
 export default function RecommendedSection() {
     const products = [
@@ -62,7 +63,7 @@ export default function RecommendedSection() {
                 {/* Product Grid (Left Side) - 2 Columns */}
                 <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-auto lg:h-[552px]">
                     {products.map((product, index) => (
-                        <div key={index} className="bg-white rounded-[20px] p-4 flex gap-4 items-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow h-full">
+                        <FadeIn key={index} delay={index * 0.1} className="bg-white rounded-[20px] p-4 flex gap-4 items-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow h-full">
                             {/* Image Container */}
                             <div className="w-[120px] h-full rounded-xl overflow-hidden flex-shrink-0 relative">
                                 <img
@@ -79,12 +80,12 @@ export default function RecommendedSection() {
                                 <p className="text-xs text-gray-400 font-medium">{product.specs}</p>
                                 <span className="text-xl font-bold text-[#0EA5E9] mt-1">{product.price}</span>
                             </div>
-                        </div>
+                        </FadeIn>
                     ))}
                 </div>
 
                 {/* Promo Card (Right Side) */}
-                <div className="bg-gradient-to-b from-[#DF8A54] to-[#B7571E] rounded-[16px] p-4 text-white relative overflow-hidden flex flex-col h-[552px] border border-transparent">
+                <FadeIn delay={0.3} className="bg-gradient-to-b from-[#DF8A54] to-[#B7571E] rounded-[16px] p-4 text-white relative overflow-hidden flex flex-col h-[552px] border border-transparent">
                     {/* Content */}
                     <div className="relative z-10 flex flex-col items-start gap-2">
                         <span className="text-xs font-medium opacity-90 uppercase tracking-wide">Big Sale</span>
@@ -110,7 +111,7 @@ export default function RecommendedSection() {
                             className="w-full h-full object-contain object-bottom drop-shadow-2xl"
                         />
                     </div>
-                </div>
+                </FadeIn>
             </div>
         </section>
     );

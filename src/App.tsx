@@ -17,6 +17,8 @@ import DeliveryBanner from './components/DeliveryBanner';
 
 import Footer from './components/Footer';
 
+import FadeIn from './components/FadeIn';
+
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -25,14 +27,37 @@ function App() {
         <CategoryBar />
       </div>
       <main className="w-full max-w-[95%] mx-auto px-4">
-        <Hero />
-        <PromoCards />
-        <TrendingSection />
-        <RecommendedSection />
-        <BannerGrid />
-        <LatestNews />
-        <ProcessSteps />
-        <DeliveryBanner />
+        <FadeIn delay={0.1}>
+          <Hero />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <PromoCards />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <TrendingSection />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <RecommendedSection />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <BannerGrid />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <LatestNews />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <ProcessSteps />
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <DeliveryBanner />
+        </FadeIn>
       </main>
       <Footer />
     </div>

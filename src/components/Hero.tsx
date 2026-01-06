@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import banner1 from '../assets/hero/banner-1.png';
 import banner2 from '../assets/hero/banner-2.png';
@@ -76,8 +76,8 @@ export default function Hero() {
               </p>
 
               <button className={`${slide.theme === 'light'
-                  ? 'bg-[#0e7664] text-white hover:bg-[#0b5c4e]'
-                  : 'bg-white text-[#0e7664] hover:bg-gray-100'
+                ? 'bg-[#0e7664] text-white hover:bg-[#0b5c4e]'
+                : 'bg-white text-[#0e7664] hover:bg-gray-100'
                 } transition-colors px-8 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 tracking-wide group cursor-pointer`}>
                 SHOP NOW
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -93,8 +93,8 @@ export default function Hero() {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide
-                  ? (slides[currentSlide].theme === 'light' ? "bg-[#0e7664]" : "bg-white")
-                  : (slides[currentSlide].theme === 'light' ? "bg-[#0e7664]/40 hover:bg-[#0e7664]/60" : "bg-white/40 hover:bg-white/60")
+                ? (slides[currentSlide].theme === 'light' ? "bg-[#0e7664]" : "bg-white")
+                : (slides[currentSlide].theme === 'light' ? "bg-[#0e7664]/40 hover:bg-[#0e7664]/60" : "bg-white/40 hover:bg-white/60")
                 }`}
             />
           ))}

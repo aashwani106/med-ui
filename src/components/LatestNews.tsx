@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import newsCardBg from '../assets/cards/news-card.png';
+import FadeIn from './FadeIn';
 
 export default function LatestNews() {
     const newsItems = [
@@ -46,7 +47,7 @@ export default function LatestNews() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {newsItems.map((item, index) => (
-                    <div key={index} className="bg-white rounded-[24px] p-4 border border-gray-200 hover:shadow-lg transition-shadow group flex flex-col h-full">
+                    <FadeIn key={index} delay={index * 0.1} className="bg-white rounded-[24px] p-4 border border-gray-200 hover:shadow-lg transition-shadow group flex flex-col h-full">
                         {/* Image */}
                         <div className="relative aspect-[1.6] mb-4 rounded-2xl overflow-hidden">
                             <img
@@ -81,7 +82,7 @@ export default function LatestNews() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </FadeIn>
                 ))}
             </div>
         </section>

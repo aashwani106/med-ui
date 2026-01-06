@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react';
 import medicineBg from '../assets/cards/medicine-bg.png';
 
+import FadeIn from './FadeIn';
+
 export default function TrendingSection() {
     const products = Array(8).fill({
         name: "Medicine Name",
@@ -41,7 +43,7 @@ export default function TrendingSection() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {products.map((product, index) => (
-                    <div key={index} className="bg-white rounded-[20px] p-4 border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer group">
+                    <FadeIn key={index} delay={index * 0.1} className="bg-white rounded-[20px] p-4 border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer group">
                         <div className="relative aspect-[1.4] mb-4 overflow-hidden rounded-xl">
                             <img
                                 src={product.image}
@@ -55,7 +57,7 @@ export default function TrendingSection() {
                             <h3 className="text-lg font-bold text-gray-900">{product.name}</h3>
                             <span className="text-lg font-bold text-[#0ea5e9]">{product.price}</span>
                         </div>
-                    </div>
+                    </FadeIn>
                 ))}
             </div>
         </section>
