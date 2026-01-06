@@ -1,0 +1,63 @@
+import { ArrowRight } from 'lucide-react';
+import medicineBg from '../assets/cards/medicine-bg.png';
+
+export default function TrendingSection() {
+    const products = Array(8).fill({
+        name: "Medicine Name",
+        usedFor: "Used for",
+        price: "$400",
+        image: medicineBg
+    });
+
+    const categories = ["Medicine", "Vitamins", "Supplements", "Health Care"];
+
+    return (
+        <section className="mb-16">
+            {/* Header */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                <h2 className="text-3xl font-bold text-gray-900">Trending this week</h2>
+
+                <div className="flex items-center gap-8 flex-1 justify-end">
+                    <div className="flex items-center gap-2   ">
+                        {categories.map((cat, index) => (
+                            <button
+                                key={index}
+                                className={`px-6 py-2 rounded-full cursor-pointer text-sm font-medium transition-colors ${index === 0
+                                    ? "bg-[#0ea5e9] text-white"
+                                    : "text-gray-500 hover:text-gray-900"
+                                    }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
+
+                    <a href="#" className="flex items-center gap-1 text-xs font-bold text-gray-600 hover:text-gray-900 uppercase tracking-wider whitespace-nowrap">
+                        View All <ArrowRight className="w-4 h-4" />
+                    </a>
+                </div>
+            </div>
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {products.map((product, index) => (
+                    <div key={index} className="bg-white rounded-[20px] p-4 border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer group">
+                        <div className="relative aspect-[1.4] mb-4 overflow-hidden rounded-xl">
+                            <img
+                                src={product.image}
+                                alt={product.name}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                            <span className="text-xs text-gray-500 font-medium">{product.usedFor}</span>
+                            <h3 className="text-lg font-bold text-gray-900">{product.name}</h3>
+                            <span className="text-lg font-bold text-[#0ea5e9]">{product.price}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+}
