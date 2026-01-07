@@ -1,66 +1,38 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import CategoryBar from './components/CategoryBar';
-import Hero from './components/Hero';
-import PromoCards from './components/PromoCards';
-
-import TrendingSection from './components/TrendingSection';
-
-import RecommendedSection from './components/RecommendedSection';
-
-import BannerGrid from './components/BannerGrid';
-
-import LatestNews from './components/LatestNews';
-
-import ProcessSteps from './components/ProcessSteps';
-
-import DeliveryBanner from './components/DeliveryBanner';
-
 import Footer from './components/Footer';
+import Home from './components/Home';
+import ProductDetails from './components/ProductDetails';
 
-import FadeIn from './components/FadeIn';
+// Simple ScrollToTop component
+function ScrollToTopComp() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="sticky top-0 z-50 bg-white shadow-xl">
-        <Navbar />
-        <CategoryBar />
+    <Router>
+      <ScrollToTopComp />
+      <div className="min-h-screen bg-gray-50">
+        <div className="sticky top-0 z-50 bg-white shadow-xl">
+          <Navbar />
+          <CategoryBar />
+        </div>
+        <main className="w-full max-w-[95%] mx-auto px-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      <main className="w-full max-w-[95%] mx-auto px-4">
-        <FadeIn delay={0.1}>
-          <Hero />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <PromoCards />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <TrendingSection />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <RecommendedSection />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <BannerGrid />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <LatestNews />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <ProcessSteps />
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <DeliveryBanner />
-        </FadeIn>
-      </main>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

@@ -6,9 +6,10 @@ interface FadeInProps {
     delay?: number;
     className?: string;
     direction?: 'up' | 'down' | 'left' | 'right';
+    onClick?: () => void;
 }
 
-export default function FadeIn({ children, delay = 0, className = "", direction = 'up' }: FadeInProps) {
+export default function FadeIn({ children, delay = 0, className = "", direction = 'up', onClick }: FadeInProps) {
     const directions = {
         up: { y: 40 },
         down: { y: -40 },
@@ -34,6 +35,7 @@ export default function FadeIn({ children, delay = 0, className = "", direction 
                 ease: [0.21, 0.47, 0.32, 0.98] // Smooth ease-out
             }}
             className={className}
+            onClick={onClick}
         >
             {children}
         </motion.div>

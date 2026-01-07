@@ -1,54 +1,9 @@
 import { ArrowRight } from 'lucide-react';
-import frame9 from '../assets/cards/frame-9.png';
 import luisBin from '../assets/cards/luis-bin.png';
 import FadeIn from './FadeIn';
+import { recommendedProducts } from '../data/mockData';
 
 export default function RecommendedSection() {
-    const products = [
-        {
-            category: "Muscle Pain",
-            name: "Pain Relief Gel",
-            specs: "150ml • 24-hour relief",
-            price: "$15.99",
-            image: frame9
-        },
-        {
-            category: "Symptom Relief",
-            name: "Cold & Flu Relief",
-            specs: "30 tablets • Fast acting",
-            price: "$12.99",
-            image: frame9
-        },
-        {
-            category: "Gut Health",
-            name: "Digestive Support",
-            specs: "60 capsules • Daily formula",
-            price: "$24.99",
-            image: frame9
-        },
-        {
-            category: "Bone Health",
-            name: "Vitamin D3",
-            specs: "90 softgels • High potency",
-            price: "$18.99",
-            image: frame9
-        },
-        {
-            category: "Better Sleep",
-            name: "Sleep Support",
-            specs: "60 tablets • Natural formula",
-            price: "$21.99",
-            image: frame9
-        },
-        {
-            category: "Mobility",
-            name: "Joint Support",
-            specs: "120 capsules • Triple action",
-            price: "$32.99",
-            image: frame9
-        }
-    ];
-
     return (
         <section className="mb-16 py-12 bg-[#FFF8F3] -mx-4 md:-mx-16 px-4 md:px-16 rounded-[40px]">
             {/* Header */}
@@ -62,7 +17,7 @@ export default function RecommendedSection() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Product Grid (Left Side) - 2 Columns */}
                 <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-auto lg:h-[552px]">
-                    {products.map((product, index) => (
+                    {recommendedProducts.map((product, index) => (
                         <FadeIn key={index} delay={index * 0.1} className="bg-white rounded-[20px] p-4 flex gap-4 items-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow h-full">
                             {/* Image Container */}
                             <div className="w-[120px] h-full rounded-xl overflow-hidden flex-shrink-0 relative">

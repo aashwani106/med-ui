@@ -1,39 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 import newsCardBg from '../assets/cards/news-card.png';
 import FadeIn from './FadeIn';
+import { newsItems } from '../data/mockData';
 
 export default function LatestNews() {
-    const newsItems = [
-        {
-            date: "August 11,2025",
-            category: "US Medicine",
-            title: "In this section, we delve into various aspects of health",
-            description: "Explore the world of medical specialties through our blog's spotlight feature. From...",
-            tags: ["Examination gloves", "Uncategorized"]
-        },
-        {
-            date: "August 11,2025",
-            category: "US Medicine",
-            title: "Discover a treasure trove of practical tips for enhancing",
-            description: "From nutrition advice to exercise routines, we're here to support your journey toward...",
-            tags: ["Examination gloves", "Uncategorized"]
-        },
-        {
-            date: "August 11,2025",
-            category: "US Medicine",
-            title: "Our patients' journeys are filled with courage, resilienc...",
-            description: "In this section, we share inspiring narratives of individuals who have overcome health c...",
-            tags: ["Examination gloves", "Uncategorized"]
-        },
-        {
-            date: "August 11,2025",
-            category: "US Medicine",
-            title: "From organizing health fairs to partnering with local organiz...",
-            description: "Find out how you can participate in community events and contribute to the h...",
-            tags: ["Examination gloves", "Uncategorized"]
-        }
-    ];
-
     return (
         <section className="mb-16">
             {/* Header */}

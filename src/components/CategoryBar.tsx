@@ -1,15 +1,7 @@
 
 
-const categories = [
-    "Pain Relief",
-    "Cold and Flu",
-    "Diabetes Care",
-    "Digestive Health",
-    "First Aid",
-    "Skin Care",
-    "Heart Health",
-    "Respiratory Health"
-];
+
+import { categories } from '../data/mockData';
 
 export default function CategoryBar() {
     return (

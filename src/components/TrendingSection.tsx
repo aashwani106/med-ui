@@ -1,17 +1,10 @@
 import { ArrowRight } from 'lucide-react';
-import medicineBg from '../assets/cards/medicine-bg.png';
-
+import { useNavigate } from 'react-router-dom';
+import { trendingProducts, trendingCategories } from '../data/mockData';
 import FadeIn from './FadeIn';
 
 export default function TrendingSection() {
-    const products = Array(8).fill({
-        name: "Medicine Name",
-        usedFor: "Used for",
-        price: "$400",
-        image: medicineBg
-    });
-
-    const categories = ["Medicine", "Vitamins", "Supplements", "Health Care"];
+    const navigate = useNavigate();
 
     return (
         <section className="mb-16">
@@ -21,7 +14,7 @@ export default function TrendingSection() {
 
                 <div className="flex items-center gap-8 flex-1 justify-end">
                     <div className="flex items-center gap-2   ">
-                        {categories.map((cat, index) => (
+                        {trendingCategories.map((cat, index) => (
                             <button
                                 key={index}
                                 className={`px-6 py-2 rounded-full cursor-pointer text-sm font-medium transition-colors ${index === 0
@@ -42,8 +35,13 @@ export default function TrendingSection() {
 
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {products.map((product, index) => (
-                    <FadeIn key={index} delay={index * 0.1} className="bg-white rounded-[20px] p-4 border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer group">
+                {trendingProducts.map((product, index) => (
+                    <FadeIn
+                        key={index}
+                        delay={index * 0.1}
+                        className="bg-white rounded-[20px] p-4 border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer group"
+                        onClick={() => navigate('/product/brufen-600')} // Static ID for demo
+                    >
                         <div className="relative aspect-[1.4] mb-4 overflow-hidden rounded-xl">
                             <img
                                 src={product.image}
