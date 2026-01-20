@@ -1,14 +1,25 @@
 const fs = require('fs');
 const path = require('path');
 
-const data = require('../temp_products.json');
+const dataBase = require('../temp_products_base.json');
+const dataSeo = require('../temp_products_seo.json');
 
 const slugify = (text) => text.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-');
 
-const products = data.map(item => {
+// Create SEO lookup map
+const seoMap = dataSeo.reduce((acc, item) => {
+    acc[item['Medicine Name']] = item;
+    return acc;
+}, {});
+
+const products = dataBase.map(item => {
+    const seoItem = seoMap[item['Medicine Name']] || {};
+
     return {
-        id: slugify(item['Medicine Name']),
+        id: seoItem['Slug'] || slugify(item['Medicine Name']),
         name: item['Medicine Name'],
+        metaTitle: seoItem['Meta Title'] || `${item['Medicine Name']} - Online`,
+        metaDescription: seoItem['Meta Description'] || item['Product Introduction'],
         breadcrumbs: ["Home", "Products", item['Medicine Name']],
         image: "frame9", // placeholder, will replacing string with variable in final file
         images: ["frame9", "frame9", "frame9", "frame9"],
@@ -22,7 +33,7 @@ const products = data.map(item => {
         mrp: `$${item['MRP (USD)']}`,
         packaging: `${item['Quantity']} Units`,
         unitPrice: `$${item['Price per Unit (USD)']}/unit`,
-        description: item['Product Introduction'],
+        description: seoItem['Meta Description'] || item['Product Introduction'],
         uses: [
             { title: "Uses", description: item['Uses'] },
             { title: "Benefits", description: item['Benefits'] },
@@ -36,7 +47,6 @@ const tsContent = `import banner1 from '../assets/hero/banner-1.png';
 import banner2 from '../assets/hero/banner-2.png';
 import banner3 from '../assets/hero/banner-3.png';
 import frame9 from '../assets/cards/frame-9.png';
-import medicineBg from '../assets/cards/medicine-bg.png';
 
 // Hero Slides Data
 export const heroSlides = [
@@ -84,6 +94,7 @@ export const allProducts = ${JSON.stringify(products, null, 4).replace(/"frame9"
 
 // Trending Section Data (Sliced from allProducts)
 export const trendingProducts = allProducts.slice(0, 8).map(p => ({
+    id: p.id,
     name: p.name,
     usedFor: p.uses[0].description,
     price: p.mrp,
@@ -94,6 +105,7 @@ export const trendingCategories = ["Medicine", "Vitamins", "Supplements", "Healt
 
 // Recommended Section Data (Sliced & mapped)
 export const recommendedProducts = allProducts.slice(8, 14).map(p => ({
+    id: p.id,
     category: p.uses[0].description.split(',')[0] || "Health",
     name: p.name,
     specs: p.packaging + " • " + p.expiry,

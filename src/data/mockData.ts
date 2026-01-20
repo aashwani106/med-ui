@@ -2,6 +2,7 @@ import banner1 from '../assets/hero/banner-1.png';
 import banner2 from '../assets/hero/banner-2.png';
 import banner3 from '../assets/hero/banner-3.png';
 import frame9 from '../assets/cards/frame-9.png';
+
 // Hero Slides Data
 export const heroSlides = [
     {
@@ -48,6 +49,8 @@ export const allProducts = [
     {
         "id": "belbien-10-mg",
         "name": "Belbien 10 mg",
+        "metaTitle": "Buy Belbien 10 mg Online | Price $749 | Trusted Pharmacy",
+        "metaDescription": "Buy Belbien 10 mg online at best price $749. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -60,7 +63,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "113 people bought in last 7 days",
+        "boughtCount": "79 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -70,7 +73,7 @@ export const allProducts = [
         "mrp": "$749",
         "packaging": "180 Units",
         "unitPrice": "$4.16/unit",
-        "description": "Used to treat insomnia and sleep disorders.",
+        "description": "Buy Belbien 10 mg online at best price $749. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -93,6 +96,8 @@ export const allProducts = [
     {
         "id": "zolpidem-10-mg",
         "name": "Zolpidem 10 mg",
+        "metaTitle": "Buy Zolpidem 10 mg Online | Price $599 | Trusted Pharmacy",
+        "metaDescription": "Buy Zolpidem 10 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -105,7 +110,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "30 people bought in last 7 days",
+        "boughtCount": "92 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -115,7 +120,7 @@ export const allProducts = [
         "mrp": "$599",
         "packaging": "180 Units",
         "unitPrice": "$4.16/unit",
-        "description": "Used for treatment of insomnia.",
+        "description": "Buy Zolpidem 10 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -138,6 +143,8 @@ export const allProducts = [
     {
         "id": "rivotril-2-mg",
         "name": "Rivotril 2 mg",
+        "metaTitle": "Buy Rivotril 2 mg Online | Price $799 | Trusted Pharmacy",
+        "metaDescription": "Buy Rivotril 2 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -150,7 +157,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "20 people bought in last 7 days",
+        "boughtCount": "97 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -160,7 +167,7 @@ export const allProducts = [
         "mrp": "$799",
         "packaging": "180 Units",
         "unitPrice": "$4.16/unit",
-        "description": "Used to manage seizures and panic disorder.",
+        "description": "Buy Rivotril 2 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -183,6 +190,8 @@ export const allProducts = [
     {
         "id": "alprazolam-1-mg",
         "name": "Alprazolam 1 mg",
+        "metaTitle": "Buy Alprazolam 1 mg Online | Price $699 | Trusted Pharmacy",
+        "metaDescription": "Buy Alprazolam 1 mg online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -195,7 +204,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "90 people bought in last 7 days",
+        "boughtCount": "34 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -205,7 +214,7 @@ export const allProducts = [
         "mrp": "$699",
         "packaging": "180 Units",
         "unitPrice": "$3.88/unit",
-        "description": "Used to treat anxiety and panic disorder.",
+        "description": "Buy Alprazolam 1 mg online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -228,6 +237,8 @@ export const allProducts = [
     {
         "id": "alprazolam-2-mg",
         "name": "Alprazolam 2 mg",
+        "metaTitle": "Buy Alprazolam 2 mg Online | Price $799 | Trusted Pharmacy",
+        "metaDescription": "Buy Alprazolam 2 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -240,7 +251,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "59 people bought in last 7 days",
+        "boughtCount": "63 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -250,7 +261,7 @@ export const allProducts = [
         "mrp": "$799",
         "packaging": "180 Units",
         "unitPrice": "$4.16/unit",
-        "description": "Used to treat anxiety and panic disorder.",
+        "description": "Buy Alprazolam 2 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -273,6 +284,8 @@ export const allProducts = [
     {
         "id": "valium-10-mg",
         "name": "Valium 10 mg",
+        "metaTitle": "Buy Valium 10 mg Online | Price $899 | Trusted Pharmacy",
+        "metaDescription": "Buy Valium 10 mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -285,7 +298,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "74 people bought in last 7 days",
+        "boughtCount": "76 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -295,7 +308,7 @@ export const allProducts = [
         "mrp": "$899",
         "packaging": "180 Units",
         "unitPrice": "$4.99/unit",
-        "description": "Used for anxiety, seizures, muscle spasms.",
+        "description": "Buy Valium 10 mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -318,6 +331,8 @@ export const allProducts = [
     {
         "id": "tramadol-citra-100-mg",
         "name": "Tramadol Citra 100 mg",
+        "metaTitle": "Buy Tramadol Citra 100 mg Online | Price $499 | Trusted Pharmacy",
+        "metaDescription": "Buy Tramadol Citra 100 mg online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -330,7 +345,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "70 people bought in last 7 days",
+        "boughtCount": "91 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -340,7 +355,7 @@ export const allProducts = [
         "mrp": "$499",
         "packaging": "180 Units",
         "unitPrice": "$2.77/unit",
-        "description": "Used to treat moderate to severe pain.",
+        "description": "Buy Tramadol Citra 100 mg online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -363,6 +378,8 @@ export const allProducts = [
     {
         "id": "tramadol-trakem-100-mg",
         "name": "Tramadol Trakem 100 mg",
+        "metaTitle": "Buy Tramadol Trakem 100 mg Online | Price $499 | Trusted Pharmacy",
+        "metaDescription": "Buy Tramadol Trakem 100 mg online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -375,7 +392,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "69 people bought in last 7 days",
+        "boughtCount": "105 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -385,7 +402,7 @@ export const allProducts = [
         "mrp": "$499",
         "packaging": "180 Units",
         "unitPrice": "$2.77/unit",
-        "description": "Used for moderate to severe pain.",
+        "description": "Buy Tramadol Trakem 100 mg online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -408,6 +425,8 @@ export const allProducts = [
     {
         "id": "tramadol-royal-225-mg",
         "name": "Tramadol Royal 225 mg",
+        "metaTitle": "Buy Tramadol Royal 225 mg Online | Price $599 | Trusted Pharmacy",
+        "metaDescription": "Buy Tramadol Royal 225 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -420,7 +439,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "50 people bought in last 7 days",
+        "boughtCount": "66 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -430,7 +449,7 @@ export const allProducts = [
         "mrp": "$599",
         "packaging": "180 Units",
         "unitPrice": "$3.32/unit",
-        "description": "High-strength pain management medication.",
+        "description": "Buy Tramadol Royal 225 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -453,6 +472,8 @@ export const allProducts = [
     {
         "id": "ritalin-30-mg",
         "name": "Ritalin 30 mg",
+        "metaTitle": "Buy Ritalin 30 mg Online | Price $899 | Trusted Pharmacy",
+        "metaDescription": "Buy Ritalin 30 mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -465,7 +486,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "102 people bought in last 7 days",
+        "boughtCount": "57 people bought in last 7 days",
         "isPrescription": false,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -475,7 +496,7 @@ export const allProducts = [
         "mrp": "$899",
         "packaging": "180 Units",
         "unitPrice": "$4.99/unit",
-        "description": "Used to treat ADHD and narcolepsy.",
+        "description": "Buy Ritalin 30 mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -498,6 +519,8 @@ export const allProducts = [
     {
         "id": "tapentadol-100-mg",
         "name": "Tapentadol 100 mg",
+        "metaTitle": "Buy Tapentadol 100 mg Online | Price $599 | Trusted Pharmacy",
+        "metaDescription": "Buy Tapentadol 100 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -510,7 +533,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "118 people bought in last 7 days",
+        "boughtCount": "33 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -520,7 +543,7 @@ export const allProducts = [
         "mrp": "$599",
         "packaging": "180 Units",
         "unitPrice": "$3.32/unit",
-        "description": "Used for moderate to severe pain.",
+        "description": "Buy Tapentadol 100 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -543,6 +566,8 @@ export const allProducts = [
     {
         "id": "firocit",
         "name": "Firocit",
+        "metaTitle": "Buy Firocit Online | Price $499 | Trusted Pharmacy",
+        "metaDescription": "Buy Firocit online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -555,7 +580,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "113 people bought in last 7 days",
+        "boughtCount": "53 people bought in last 7 days",
         "isPrescription": false,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -565,7 +590,7 @@ export const allProducts = [
         "mrp": "$499",
         "packaging": "180 Units",
         "unitPrice": "$2.77/unit",
-        "description": "Used to prevent iron and folic acid deficiency.",
+        "description": "Buy Firocit online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -588,6 +613,8 @@ export const allProducts = [
     {
         "id": "gabapentin",
         "name": "Gabapentin",
+        "metaTitle": "Buy Gabapentin Online | Price $599 | Trusted Pharmacy",
+        "metaDescription": "Buy Gabapentin online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -600,7 +627,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "105 people bought in last 7 days",
+        "boughtCount": "24 people bought in last 7 days",
         "isPrescription": false,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -610,7 +637,7 @@ export const allProducts = [
         "mrp": "$599",
         "packaging": "180 Units",
         "unitPrice": "$3.32/unit",
-        "description": "Used for nerve pain and seizures.",
+        "description": "Buy Gabapentin online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -633,6 +660,8 @@ export const allProducts = [
     {
         "id": "ativan",
         "name": "Ativan",
+        "metaTitle": "Buy Ativan Online | Price $699 | Trusted Pharmacy",
+        "metaDescription": "Buy Ativan online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -645,7 +674,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "41 people bought in last 7 days",
+        "boughtCount": "63 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -655,7 +684,7 @@ export const allProducts = [
         "mrp": "$699",
         "packaging": "180 Units",
         "unitPrice": "$3.88/unit",
-        "description": "Used for anxiety disorders.",
+        "description": "Buy Ativan online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -678,6 +707,8 @@ export const allProducts = [
     {
         "id": "soma-350-mg",
         "name": "Soma 350 mg",
+        "metaTitle": "Buy Soma 350 mg Online | Price $699 | Trusted Pharmacy",
+        "metaDescription": "Buy Soma 350 mg online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -690,7 +721,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "111 people bought in last 7 days",
+        "boughtCount": "79 people bought in last 7 days",
         "isPrescription": false,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -700,7 +731,7 @@ export const allProducts = [
         "mrp": "$699",
         "packaging": "180 Units",
         "unitPrice": "$3.88/unit",
-        "description": "Used to relieve muscle spasms.",
+        "description": "Buy Soma 350 mg online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",
@@ -723,6 +754,8 @@ export const allProducts = [
     {
         "id": "oxycodone-30-mg",
         "name": "Oxycodone 30 mg",
+        "metaTitle": "Buy Oxycodone 30 mg Online | Price $799 | Trusted Pharmacy",
+        "metaDescription": "Buy Oxycodone 30 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
@@ -735,7 +768,7 @@ export const allProducts = [
             frame9,
             frame9
         ],
-        "boughtCount": "90 people bought in last 7 days",
+        "boughtCount": "65 people bought in last 7 days",
         "isPrescription": true,
         "consumeType": "ORAL",
         "returnPolicy": "NOT RETURNABLE",
@@ -745,7 +778,7 @@ export const allProducts = [
         "mrp": "$799",
         "packaging": "180 Units",
         "unitPrice": "$4.43/unit",
-        "description": "Used for severe pain management.",
+        "description": "Buy Oxycodone 30 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "uses": [
             {
                 "title": "Uses",

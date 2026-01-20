@@ -20,7 +20,22 @@ export default function ProductDetails() {
     useEffect(() => {
         setSelectedImage(0);
         window.scrollTo(0, 0);
-    }, [id]);
+
+        if (product) {
+            document.title = product.metaTitle || `${product.name} | MediMarket`;
+
+            // Update meta description
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', product.metaDescription || product.description);
+            } else {
+                const meta = document.createElement('meta');
+                meta.name = 'description';
+                meta.content = product.metaDescription || product.description;
+                document.head.appendChild(meta);
+            }
+        }
+    }, [id, product]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const { left, top, width, height } = e.currentTarget.getBoundingClientRect();

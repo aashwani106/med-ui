@@ -2,7 +2,7 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 const path = require('path');
 
-const excelPath = path.resolve(__dirname, '../src/assets/all_medicine_products.xlsx');
+const excelPath = path.resolve(__dirname, '../src/assets/all_medicine_products_with_seo.xlsx');
 const outputPath = path.resolve(__dirname, '../temp_products.json');
 
 console.log(`Reading file from: ${excelPath}`);
