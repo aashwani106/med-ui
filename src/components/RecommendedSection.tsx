@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import luisBin from '../assets/cards/luis-bin.png';
 import FadeIn from './FadeIn';
 import { recommendedProducts } from '../data/mockData';
 
 export default function RecommendedSection() {
+    const navigate = useNavigate();
+
     return (
         <section className="mb-16 py-12 bg-[#FFF8F3] -mx-4 md:-mx-16 px-4 md:px-16 rounded-[40px]">
             {/* Header */}
@@ -18,7 +21,12 @@ export default function RecommendedSection() {
                 {/* Product Grid (Left Side) - 2 Columns */}
                 <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-auto lg:h-[552px]">
                     {recommendedProducts.map((product, index) => (
-                        <FadeIn key={index} delay={index * 0.1} className="bg-white rounded-[20px] p-4 flex gap-4 items-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow h-full">
+                        <FadeIn
+                            key={index}
+                            delay={index * 0.1}
+                            className="bg-white rounded-[20px] p-4 flex gap-4 items-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow h-full cursor-pointer"
+                            onClick={() => navigate(`/product/${product.id}`)}
+                        >
                             {/* Image Container */}
                             <div className="w-[120px] h-full rounded-xl overflow-hidden flex-shrink-0 relative">
                                 <img

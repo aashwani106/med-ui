@@ -40,7 +40,7 @@ export default function TrendingSection() {
                         key={index}
                         delay={index * 0.1}
                         className="bg-white rounded-[20px] p-4 border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer group"
-                        onClick={() => navigate('/product/brufen-600')} // Static ID for demo
+                        onClick={() => navigate(`/product/${product.id}`)}
                     >
                         <div className="relative aspect-[1.4] mb-4 overflow-hidden rounded-xl">
                             <img

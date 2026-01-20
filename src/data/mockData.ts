@@ -2,9 +2,6 @@ import banner1 from '../assets/hero/banner-1.png';
 import banner2 from '../assets/hero/banner-2.png';
 import banner3 from '../assets/hero/banner-3.png';
 import frame9 from '../assets/cards/frame-9.png';
-import medicineBg from '../assets/cards/medicine-bg.png';
-// Note: We'll re-export images or use them in data structures here
-
 // Hero Slides Data
 export const heroSlides = [
     {
@@ -46,61 +43,750 @@ export const categories = [
     "Respiratory Health"
 ];
 
-// Trending Section Data
-export const trendingProducts = Array(8).fill({
-    name: "Medicine Name",
-    usedFor: "Used for",
-    price: "$400",
-    image: medicineBg
-});
+// All Products Data
+export const allProducts = [
+    {
+        "id": "belbien-10-mg",
+        "name": "Belbien 10 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Belbien 10 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "113 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Zolpidem Tartrate",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$749",
+        "packaging": "180 Units",
+        "unitPrice": "$4.16/unit",
+        "description": "Used to treat insomnia and sleep disorders.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Insomnia"
+            },
+            {
+                "title": "Benefits",
+                "description": "Helps fall asleep faster and improves sleep quality."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Drowsiness, dizziness, headache."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take as prescribed before bedtime."
+            }
+        ]
+    },
+    {
+        "id": "zolpidem-10-mg",
+        "name": "Zolpidem 10 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Zolpidem 10 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "30 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Zolpidem Tartrate",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$599",
+        "packaging": "180 Units",
+        "unitPrice": "$4.16/unit",
+        "description": "Used for treatment of insomnia.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Insomnia"
+            },
+            {
+                "title": "Benefits",
+                "description": "Improves sleep duration and quality."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Dizziness, sleepiness."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take before bedtime as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "rivotril-2-mg",
+        "name": "Rivotril 2 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Rivotril 2 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "20 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Clonazepam 2 mg",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$799",
+        "packaging": "180 Units",
+        "unitPrice": "$4.16/unit",
+        "description": "Used to manage seizures and panic disorder.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Seizures, panic disorder"
+            },
+            {
+                "title": "Benefits",
+                "description": "Reduces seizure frequency and anxiety."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Drowsiness, dizziness, memory issues."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take as directed by physician."
+            }
+        ]
+    },
+    {
+        "id": "alprazolam-1-mg",
+        "name": "Alprazolam 1 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Alprazolam 1 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "90 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Alprazolam",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$699",
+        "packaging": "180 Units",
+        "unitPrice": "$3.88/unit",
+        "description": "Used to treat anxiety and panic disorder.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Anxiety, panic disorder"
+            },
+            {
+                "title": "Benefits",
+                "description": "Calms nervous system."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Sleepiness, impaired coordination."
+            },
+            {
+                "title": "How to Use",
+                "description": "Use only as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "alprazolam-2-mg",
+        "name": "Alprazolam 2 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Alprazolam 2 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "59 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Alprazolam",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$799",
+        "packaging": "180 Units",
+        "unitPrice": "$4.16/unit",
+        "description": "Used to treat anxiety and panic disorder.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Anxiety, panic disorder"
+            },
+            {
+                "title": "Benefits",
+                "description": "Reduces anxiety symptoms."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Drowsiness, memory impairment."
+            },
+            {
+                "title": "How to Use",
+                "description": "Use only as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "valium-10-mg",
+        "name": "Valium 10 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Valium 10 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "74 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Diazepam",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$899",
+        "packaging": "180 Units",
+        "unitPrice": "$4.99/unit",
+        "description": "Used for anxiety, seizures, muscle spasms.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Anxiety, epilepsy, muscle spasm"
+            },
+            {
+                "title": "Benefits",
+                "description": "Relaxes muscles and calms nerves."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Fatigue, weakness."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take exactly as directed."
+            }
+        ]
+    },
+    {
+        "id": "tramadol-citra-100-mg",
+        "name": "Tramadol Citra 100 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Tramadol Citra 100 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "70 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Tramadol HCl",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$499",
+        "packaging": "180 Units",
+        "unitPrice": "$2.77/unit",
+        "description": "Used to treat moderate to severe pain.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Pain management"
+            },
+            {
+                "title": "Benefits",
+                "description": "Effective pain relief."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Nausea, dizziness."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "tramadol-trakem-100-mg",
+        "name": "Tramadol Trakem 100 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Tramadol Trakem 100 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "69 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Tramadol HCl",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$499",
+        "packaging": "180 Units",
+        "unitPrice": "$2.77/unit",
+        "description": "Used for moderate to severe pain.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Pain management"
+            },
+            {
+                "title": "Benefits",
+                "description": "Improves pain tolerance."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Constipation, dizziness."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "tramadol-royal-225-mg",
+        "name": "Tramadol Royal 225 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Tramadol Royal 225 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "50 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Tramadol HCl",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$599",
+        "packaging": "180 Units",
+        "unitPrice": "$3.32/unit",
+        "description": "High-strength pain management medication.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Severe pain"
+            },
+            {
+                "title": "Benefits",
+                "description": "Long-lasting pain control."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Drowsiness, nausea."
+            },
+            {
+                "title": "How to Use",
+                "description": "Use strictly as directed."
+            }
+        ]
+    },
+    {
+        "id": "ritalin-30-mg",
+        "name": "Ritalin 30 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Ritalin 30 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "102 people bought in last 7 days",
+        "isPrescription": false,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Methylphenidate",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$899",
+        "packaging": "180 Units",
+        "unitPrice": "$4.99/unit",
+        "description": "Used to treat ADHD and narcolepsy.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "ADHD, narcolepsy"
+            },
+            {
+                "title": "Benefits",
+                "description": "Improves focus and alertness."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Insomnia, appetite loss."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take before meals as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "tapentadol-100-mg",
+        "name": "Tapentadol 100 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Tapentadol 100 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "118 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Tapentadol",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$599",
+        "packaging": "180 Units",
+        "unitPrice": "$3.32/unit",
+        "description": "Used for moderate to severe pain.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Pain relief"
+            },
+            {
+                "title": "Benefits",
+                "description": "Fast acting pain control."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Nausea, dizziness."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "firocit",
+        "name": "Firocit",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Firocit"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "113 people bought in last 7 days",
+        "isPrescription": false,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Ferrous Sulfate + Folic Acid",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$499",
+        "packaging": "180 Units",
+        "unitPrice": "$2.77/unit",
+        "description": "Used to prevent iron and folic acid deficiency.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Anemia prevention"
+            },
+            {
+                "title": "Benefits",
+                "description": "Improves hemoglobin levels."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Stomach upset."
+            },
+            {
+                "title": "How to Use",
+                "description": "One tablet daily."
+            }
+        ]
+    },
+    {
+        "id": "gabapentin",
+        "name": "Gabapentin",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Gabapentin"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "105 people bought in last 7 days",
+        "isPrescription": false,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Gabapentin",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$599",
+        "packaging": "180 Units",
+        "unitPrice": "$3.32/unit",
+        "description": "Used for nerve pain and seizures.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Neuropathic pain, seizures"
+            },
+            {
+                "title": "Benefits",
+                "description": "Reduces nerve pain."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Dizziness, fatigue."
+            },
+            {
+                "title": "How to Use",
+                "description": "Take as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "ativan",
+        "name": "Ativan",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Ativan"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "41 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Lorazepam",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$699",
+        "packaging": "180 Units",
+        "unitPrice": "$3.88/unit",
+        "description": "Used for anxiety disorders.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Anxiety"
+            },
+            {
+                "title": "Benefits",
+                "description": "Provides calming effect."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Drowsiness."
+            },
+            {
+                "title": "How to Use",
+                "description": "Use only as prescribed."
+            }
+        ]
+    },
+    {
+        "id": "soma-350-mg",
+        "name": "Soma 350 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Soma 350 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "111 people bought in last 7 days",
+        "isPrescription": false,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Carisoprodol",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$699",
+        "packaging": "180 Units",
+        "unitPrice": "$3.88/unit",
+        "description": "Used to relieve muscle spasms.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Muscle spasm"
+            },
+            {
+                "title": "Benefits",
+                "description": "Relaxes muscles."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Sleepiness, headache."
+            },
+            {
+                "title": "How to Use",
+                "description": "Short-term use only."
+            }
+        ]
+    },
+    {
+        "id": "oxycodone-30-mg",
+        "name": "Oxycodone 30 mg",
+        "breadcrumbs": [
+            "Home",
+            "Products",
+            "Oxycodone 30 mg"
+        ],
+        "image": frame9,
+        "images": [
+            frame9,
+            frame9,
+            frame9,
+            frame9
+        ],
+        "boughtCount": "90 people bought in last 7 days",
+        "isPrescription": true,
+        "consumeType": "ORAL",
+        "returnPolicy": "NOT RETURNABLE",
+        "expiry": "2 Year",
+        "composition": "Oxycodone",
+        "manufacturer": "PHARMACEUTICALS LTD",
+        "mrp": "$799",
+        "packaging": "180 Units",
+        "unitPrice": "$4.43/unit",
+        "description": "Used for severe pain management.",
+        "uses": [
+            {
+                "title": "Uses",
+                "description": "Severe pain"
+            },
+            {
+                "title": "Benefits",
+                "description": "Strong pain relief."
+            },
+            {
+                "title": "Side Effects",
+                "description": "Respiratory depression risk."
+            },
+            {
+                "title": "How to Use",
+                "description": "Strictly as prescribed."
+            }
+        ]
+    }
+];
+
+// Trending Section Data (Sliced from allProducts)
+export const trendingProducts = allProducts.slice(0, 8).map(p => ({
+    id: p.id,
+    name: p.name,
+    usedFor: p.uses[0].description,
+    price: p.mrp,
+    image: p.image
+}));
 
 export const trendingCategories = ["Medicine", "Vitamins", "Supplements", "Health Care"];
 
-// Recommended Section Data
-export const recommendedProducts = [
-    {
-        category: "Muscle Pain",
-        name: "Pain Relief Gel",
-        specs: "150ml • 24-hour relief",
-        price: "$15.99",
-        image: frame9
-    },
-    {
-        category: "Symptom Relief",
-        name: "Cold & Flu Relief",
-        specs: "30 tablets • Fast acting",
-        price: "$12.99",
-        image: frame9
-    },
-    {
-        category: "Gut Health",
-        name: "Digestive Support",
-        specs: "60 capsules • Daily formula",
-        price: "$24.99",
-        image: frame9
-    },
-    {
-        category: "Bone Health",
-        name: "Vitamin D3",
-        specs: "90 softgels • High potency",
-        price: "$18.99",
-        image: frame9
-    },
-    {
-        category: "Better Sleep",
-        name: "Sleep Support",
-        specs: "60 tablets • Natural formula",
-        price: "$21.99",
-        image: frame9
-    },
-    {
-        category: "Mobility",
-        name: "Joint Support",
-        specs: "120 capsules • Triple action",
-        price: "$32.99",
-        image: frame9
-    }
-];
+// Recommended Section Data (Sliced & mapped)
+export const recommendedProducts = allProducts.slice(8, 14).map(p => ({
+    id: p.id,
+    category: p.uses[0].description.split(',')[0] || "Health",
+    name: p.name,
+    specs: p.packaging + " • " + p.expiry,
+    price: p.unitPrice.split('/')[0], // simplistic
+    image: p.image
+}));
 
 // Latest News Data
 export const newsItems = [
@@ -165,44 +851,5 @@ export const processSteps = [
 // Banner Grid Data (IDs for mapping)
 export const bannerGridItems = [1, 2, 3];
 
-// Single Product Detail (Mock for the specific page request)
-export const productDetails = {
-    id: "brufen-600",
-    name: "Brufen 600 Tablet",
-    breadcrumbs: ["Home", "Trending this week", "Brufen 600 Tablet 15's"],
-    image: frame9, // Using medicineBg as placeholder for main image
-    images: [frame9, frame9, frame9, frame9], // Gallery
-    boughtCount: "63 people bought in last 7 days",
-    isPrescription: true,
-    consumeType: "ORAL",
-    returnPolicy: "NOT RETURNABLE",
-    expiry: "2 Year",
-    composition: "IBUPROFEN-600MG",
-    manufacturer: "ABBOTT INDIA LTD",
-    mrp: "$150",
-    packaging: "15 Tablet",
-    unitPrice: "$10/unit",
-    description: "Brufen 600 Tablet is used to relieve mild to moderate pain, inflammation, and fever in adults and paediatrics above 6 months of age. It helps to treat conditions such as menstrual cramps, headache, neuralgia (nerve-related pain), migraine, back pain, dental pain, swelling and stiffness in joints and muscles, cold, and flu symptoms.\n\nBrufen 600 Tablet contains 'Ibuprofen', which works by blocking the effect of a chemical messenger in the body. It is known as cyclo-oxygenase (COX) enzymes that make other chemical prostaglandins. These prostaglandins are produced at injury sites and cause pain and swelling. By blocking the COX enzymes' effect, fewer prostaglandins are produced, which reduces mild to moderate pain, inflammation, and fever.",
-    uses: [
-        {
-            title: "Pain Relief",
-            description: "Brufen 600 Tablet is widely used to relieve mild to moderate pain, including headaches, menstrual cramps, toothaches, and muscle aches, offering effective comfort."
-        },
-        {
-            title: "Anti-Inflammatory",
-            description: "Brufen 600 Tablet reduces inflammation and swelling associated with various conditions such as arthritis and injuries, supporting recovery and mobility."
-        },
-        {
-            title: "Fever Reduction",
-            description: "Brufen 600 Tablet is effective in lowering fever in both adults and children, making it a trusted option for managing fever caused by illnesses or infections."
-        },
-        {
-            title: "Post-Surgical Pain Management",
-            description: "After surgical procedures, Brufen 600 Tablet is often prescribed to relieve pain and inflammation, aiding in a smoother recovery."
-        },
-        {
-            title: "Osteoarthritis and Rheumatoid Arthritis",
-            description: "Brufen 600 Tablet plays a role in managing chronic pain and improving joint function as part of treatment plans for osteoarthritis and rheumatoid arthritis."
-        }
-    ]
-};
+// Default product details fallback (First item)
+export const productDetails = allProducts[0];

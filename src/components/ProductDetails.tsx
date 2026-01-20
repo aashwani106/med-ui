@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Share2, Info, TrendingUp } from 'lucide-react';
-import { productDetails } from '../data/mockData';
+import { useParams } from 'react-router-dom';
+import { allProducts } from '../data/mockData';
 import FadeIn from './FadeIn';
 import LatestNews from './LatestNews';
 import ProcessSteps from './ProcessSteps';
@@ -8,10 +9,18 @@ import DeliveryBanner from './DeliveryBanner';
 import ContactModal from './ContactModal';
 
 export default function ProductDetails() {
+    const { id } = useParams();
+    const product = allProducts.find(p => p.id === id) || allProducts[0];
+
     const [selectedImage, setSelectedImage] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    useEffect(() => {
+        setSelectedImage(0);
+        window.scrollTo(0, 0);
+    }, [id]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
@@ -25,12 +34,12 @@ export default function ProductDetails() {
             <div className="pt-4 pb-16">
                 {/* Breadcrumb - Adjusted padding to align with layout */}
                 <div className="text-[11px] font-medium text-gray-500 mb-6 flex items-center gap-2">
-                    {productDetails.breadcrumbs.map((item, index) => (
+                    {product.breadcrumbs.map((item, index) => (
                         <span key={index} className="flex items-center gap-2">
-                            <span className={index === productDetails.breadcrumbs.length - 1 ? "text-[#102a56]" : "hover:text-[#102a56] cursor-pointer transition-colors"}>
+                            <span className={index === product.breadcrumbs.length - 1 ? "text-[#102a56]" : "hover:text-[#102a56] cursor-pointer transition-colors"}>
                                 {item}
                             </span>
-                            {index < productDetails.breadcrumbs.length - 1 && <span className="text-gray-300">/</span>}
+                            {index < product.breadcrumbs.length - 1 && <span className="text-gray-300">/</span>}
                         </span>
                     ))}
                 </div>
@@ -40,7 +49,7 @@ export default function ProductDetails() {
                     <div className="flex-1 flex gap-4 h-fit">
                         {/* Thumbnails */}
                         <div className="flex flex-col gap-4">
-                            {productDetails.images.map((img, index) => (
+                            {product.images.map((img, index) => (
                                 <div
                                     key={index}
                                     onClick={() => setSelectedImage(index)}
@@ -62,8 +71,8 @@ export default function ProductDetails() {
                             onMouseMove={handleMouseMove}
                         >
                             <img
-                                src={productDetails.images[selectedImage]}
-                                alt={productDetails.name}
+                                src={product.images[selectedImage]}
+                                alt={product.name}
                                 className="w-full h-full object-cover mix-blend-multiply transition-transform duration-100 ease-out"
                                 style={{
                                     transformOrigin: `${cursorPos.x}% ${cursorPos.y}%`,
@@ -77,11 +86,11 @@ export default function ProductDetails() {
                     <div className="flex-1 pt-2">
                         <div className="flex justify-between items-start mb-2">
                             <div className="flex items-center gap-3">
-                                <h1 className="text-2xl font-bold text-[#1D1D1D]">{productDetails.name}</h1>
-                                {productDetails.boughtCount && (
+                                <h1 className="text-2xl font-bold text-[#1D1D1D]">{product.name}</h1>
+                                {product.boughtCount && (
                                     <span className="flex items-center gap-1.5 text-[10px] bg-[#E8F8EE] text-[#15803D] px-2.5 py-1 rounded-full font-bold uppercase tracking-wide">
                                         <TrendingUp className="w-3 h-3" />
-                                        {productDetails.boughtCount}
+                                        {product.boughtCount}
                                     </span>
                                 )}
                             </div>
@@ -90,7 +99,7 @@ export default function ProductDetails() {
                             </button>
                         </div>
 
-                        {productDetails.isPrescription && (
+                        {product.isPrescription && (
                             <div className="inline-flex items-center gap-1.5 bg-[#F0F4FF] text-[#3B82F6] px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider mb-8">
                                 Prescription drug <Info className="w-3 h-3" />
                             </div>
@@ -100,23 +109,23 @@ export default function ProductDetails() {
                         <div className="mb-8 bg-[#F5F5F5] rounded-xl overflow-hidden">
                             <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
                                 <span className="text-sm text-gray-500 font-semibold pl-2">Consume Type</span>
-                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2 uppercase">{productDetails.consumeType}</span>
+                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2 uppercase">{product.consumeType}</span>
                             </div>
                             <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
                                 <span className="text-sm text-gray-500 font-semibold pl-2">Return Policy</span>
-                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2 uppercase">{productDetails.returnPolicy}</span>
+                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2 uppercase">{product.returnPolicy}</span>
                             </div>
                             <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
                                 <span className="text-sm text-gray-500 font-semibold pl-2">Expires on or after</span>
-                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2">{productDetails.expiry}</span>
+                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2">{product.expiry}</span>
                             </div>
                             <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
                                 <span className="text-sm text-gray-500 font-semibold pl-2">Composition</span>
-                                <span className="text-sm font-bold text-[#1E4C8D] text-right pr-2 uppercase">{productDetails.composition}</span>
+                                <span className="text-sm font-bold text-[#1E4C8D] text-right pr-2 uppercase">{product.composition}</span>
                             </div>
                             <div className="grid grid-cols-[1.5fr_2fr] py-4 border-gray-100 items-center">
                                 <span className="text-sm text-gray-500 font-semibold pl-2">Manufacturer/Marketer</span>
-                                <span className="text-sm font-bold text-[#1E4C8D] text-right pr-2 uppercase">{productDetails.manufacturer}</span>
+                                <span className="text-sm font-bold text-[#1E4C8D] text-right pr-2 uppercase">{product.manufacturer}</span>
                             </div>
                         </div>
 
@@ -126,12 +135,12 @@ export default function ProductDetails() {
                                 <div>
                                     <div className="flex items-end gap-2 mb-1">
                                         <span className="text-xl font-bold text-[#1D1D1D]">MRP</span>
-                                        <span className="text-3xl font-extrabold text-[#1D1D1D]">{productDetails.mrp}</span>
+                                        <span className="text-3xl font-extrabold text-[#1D1D1D]">{product.mrp}</span>
                                     </div>
                                     <div className="flex items-center gap-2 mb-1 text-[11px] font-medium text-gray-500">
-                                        <span>{productDetails.packaging}</span>
+                                        <span>{product.packaging}</span>
                                         <span className="text-gray-300">•</span>
-                                        <span>{productDetails.unitPrice}</span>
+                                        <span>{product.unitPrice}</span>
                                         <span className="text-gray-300">•</span>
                                         <span>(Inclusive of all Taxes)</span>
                                     </div>
@@ -152,7 +161,7 @@ export default function ProductDetails() {
                 <ContactModal
                     isOpen={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
-                    productName={productDetails.name}
+                    productName={product.name}
                 />
 
                 {/* Tabs / Info Sections */}
@@ -186,16 +195,16 @@ export default function ProductDetails() {
 
                     <div className="w-full">
                         <div className="mb-10">
-                            <h2 className="text-lg font-bold text-[#1D1D1D] mb-4">About {productDetails.name}</h2>
+                            <h2 className="text-lg font-bold text-[#1D1D1D] mb-4">About {product.name}</h2>
                             <p className="text-sm text-gray-500 leading-relaxed whitespace-pre-line text-justify">
-                                {productDetails.description}
+                                {product.description}
                             </p>
                         </div>
 
                         <div>
-                            <h2 className="text-lg font-bold text-[#1D1D1D] mb-6">Uses of {productDetails.name}</h2>
+                            <h2 className="text-lg font-bold text-[#1D1D1D] mb-6">Uses of {product.name}</h2>
                             <ul className="flex flex-col gap-4">
-                                {productDetails.uses.map((use, i) => (
+                                {product.uses.map((use, i) => (
                                     <li key={i} className="text-sm text-gray-500 leading-relaxed">
                                         <strong className="text-[#1D1D1D] mr-1">{use.title}:</strong>
                                         {use.description}
