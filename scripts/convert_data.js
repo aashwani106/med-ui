@@ -12,6 +12,9 @@ const outputPath = path.resolve(__dirname, '../temp_products.json');
 
 console.log(`Reading file from: ${excelPath}`);
 
+
+
+
 try {
     const workbook = XLSX.readFile(excelPath);
     const sheetName = workbook.SheetNames[0];
