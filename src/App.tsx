@@ -5,6 +5,7 @@ import CategoryBar from './components/CategoryBar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import ProductDetails from './components/ProductDetails';
+import AllProducts from './components/AllProducts';
 
 // Simple ScrollToTop component
 function ScrollToTopComp() {
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/products" element={<AllProducts />} />
           </Routes>
         </main>
         <Footer />

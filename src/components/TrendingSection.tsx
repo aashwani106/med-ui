@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { trendingProducts, trendingCategories } from '../data/mockData';
 import FadeIn from './FadeIn';
 
@@ -27,9 +27,9 @@ export default function TrendingSection() {
                         ))}
                     </div>
 
-                    <a href="#" className="flex items-center gap-1 text-xs font-bold text-gray-600 hover:text-gray-900 uppercase tracking-wider whitespace-nowrap">
+                    <Link to="/products" className="flex items-center gap-1 text-xs font-bold text-gray-600 hover:text-gray-900 uppercase tracking-wider whitespace-nowrap">
                         View All <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                 </div>
             </div>
 
