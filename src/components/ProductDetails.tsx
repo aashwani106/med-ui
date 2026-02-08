@@ -130,18 +130,18 @@ export default function ProductDetails() {
                                             }`}
                                     >
                                         <span className="text-sm text-gray-500 font-semibold">{key} :</span>
-                                        <span className="text-sm font-bold text-[#1D1D1D] text-right uppercase">{value as string}</span>
+                                        <span className="text-sm font-bold text-[#1E4C8D] text-right uppercase">{value as string}</span>
                                     </div>
                                 ))
                             ) : (
                                 <>
                                     <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
                                         <span className="text-sm text-gray-500 font-semibold">Consume Type</span>
-                                        <span className="text-sm font-bold text-[#1D1D1D] text-right uppercase">{product.consumeType}</span>
+                                        <span className="text-sm font-bold text-[#1E4C8D] text-right uppercase">{product.consumeType}</span>
                                     </div>
                                     <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
                                         <span className="text-sm text-gray-500 font-semibold">Return Policy</span>
-                                        <span className="text-sm font-bold text-[#1D1D1D] text-right uppercase">{product.returnPolicy}</span>
+                                        <span className="text-sm font-bold text-[#1E4C8D] text-right uppercase">{product.returnPolicy}</span>
                                     </div>
                                     <div className="grid grid-cols-[1.5fr_2fr] py-4 items-center">
                                         <span className="text-sm text-gray-500 font-semibold">Composition</span>
