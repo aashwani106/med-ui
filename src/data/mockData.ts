@@ -14,6 +14,9 @@ import gabapenteneImg from '../assets/medicine/Gabapentene.png';
 import ativanImg from '../assets/medicine/Ativan (Lorezapam).png';
 import somaImg from '../assets/medicine/soma 350mg.png';
 import oxycodoneImg from '../assets/medicine/Oxycodone -30mg.png';
+import valiumImg from '../assets/medicine/valium (diazepam) - 10mg.png';
+import alprazolam2mgImg from '../assets/medicine/Alprazolam (xanax)- 2mg.png';
+import alprazolam1mgImg from '../assets/medicine/Alprazolam (xanax)-1 mg.png';
 
 // Hero Slides Data
 export const heroSlides = [
@@ -220,20 +223,20 @@ export const allProducts = [
     },
     {
         "id": "alprazolam-1-mg",
-        "name": "Alprazolam 1 mg",
-        "metaTitle": "Buy Alprazolam 1 mg Online | Price $699 | Trusted Pharmacy",
-        "metaDescription": "Buy Alprazolam 1 mg online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
+        "name": "Alprazolam (xanax)-1 mg",
+        "metaTitle": "Buy Alprazolam (xanax)-1 mg Online | Price $699 | Trusted Pharmacy",
+        "metaDescription": "Buy Alprazolam (xanax)-1 mg online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
-            "Alprazolam 1 mg"
+            "Alprazolam (xanax)-1 mg"
         ],
-        "image": belbienImg,
+        "image": alprazolam1mgImg,
         "images": [
-            belbienImg,
-            belbienImg,
-            belbienImg,
-            belbienImg
+            alprazolam1mgImg,
+            alprazolam1mgImg,
+            alprazolam1mgImg,
+            alprazolam1mgImg
         ],
         "boughtCount": "34 people bought in last 7 days",
         "isPrescription": true,
@@ -272,20 +275,20 @@ export const allProducts = [
     },
     {
         "id": "alprazolam-2-mg",
-        "name": "Alprazolam 2 mg",
-        "metaTitle": "Buy Alprazolam 2 mg Online | Price $799 | Trusted Pharmacy",
-        "metaDescription": "Buy Alprazolam 2 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
+        "name": "Alprazolam (xanax)- 2mg",
+        "metaTitle": "Buy Alprazolam (xanax)- 2mg Online | Price $799 | Trusted Pharmacy",
+        "metaDescription": "Buy Alprazolam (xanax)- 2mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
-            "Alprazolam 2 mg"
+            "Alprazolam (xanax)- 2mg"
         ],
-        "image": zolpidemImg,
+        "image": alprazolam2mgImg,
         "images": [
-            zolpidemImg,
-            zolpidemImg,
-            zolpidemImg,
-            zolpidemImg
+            alprazolam2mgImg,
+            alprazolam2mgImg,
+            alprazolam2mgImg,
+            alprazolam2mgImg
         ],
         "boughtCount": "63 people bought in last 7 days",
         "isPrescription": true,
@@ -324,20 +327,20 @@ export const allProducts = [
     },
     {
         "id": "valium-10-mg",
-        "name": "Valium 10 mg",
-        "metaTitle": "Buy Valium 10 mg Online | Price $899 | Trusted Pharmacy",
-        "metaDescription": "Buy Valium 10 mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
+        "name": "valium (diazepam) - 10mg",
+        "metaTitle": "Buy valium (diazepam) - 10mg Online | Price $899 | Trusted Pharmacy",
+        "metaDescription": "Buy valium (diazepam) - 10mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
             "Home",
             "Products",
-            "Valium 10 mg"
+            "valium (diazepam) - 10mg"
         ],
-        "image": burfenImg,
+        "image": valiumImg,
         "images": [
-            burfenImg,
-            burfenImg,
-            burfenImg,
-            burfenImg
+            valiumImg,
+            valiumImg,
+            valiumImg,
+            valiumImg
         ],
         "boughtCount": "76 people bought in last 7 days",
         "isPrescription": true,
