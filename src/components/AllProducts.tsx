@@ -29,7 +29,9 @@ export default function AllProducts() {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <span className="text-xs text-gray-500 font-medium">{product.uses && product.uses[0] ? product.uses[0].description : ''}</span>
+                            <span className="text-xs text-gray-500 font-medium line-clamp-2">
+                                {product.usage || (product.uses && product.uses[0] ? product.uses[0].description : '')}
+                            </span>
                             <h3 className="text-lg font-bold text-gray-900">{product.name}</h3>
                             <span className="text-lg font-bold text-[#0ea5e9]">{product.mrp}</span>
                         </div>

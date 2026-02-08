@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Phone, Menu, X } from 'lucide-react';
 import mainLogo from '../assets/main-logo.png';
 
@@ -9,13 +10,13 @@ export default function Navbar() {
         <header className="w-full bg-white relative z-[100]">
             <div className="w-full bg-white py-1 px-4 md:px-16 flex items-center justify-between">
                 {/* Logo Section */}
-                <div className="flex items-center">
+                <Link to="/" className="flex items-center cursor-pointer">
                     <img src={mainLogo} alt="MediMarket Logo" className="h-10 w-auto object-contain" />
-                </div>
+                </Link>
 
                 {/* Navigation Links - Desktop */}
                 <nav className="hidden md:flex items-center gap-10 text-[13px] font-bold tracking-wide text-gray-800">
-                    <a href="#" className="text-[#102a56] font-extrabold hover:text-[#1e4c8d] transition-colors uppercase">HOME</a>
+                    <Link to="/" className="text-[#102a56] font-extrabold hover:text-[#1e4c8d] transition-colors uppercase">HOME</Link>
                     <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">HOW TO BOOK</a>
                     <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">PRODUCTS</a>
                     <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">ABOUT US</a>
@@ -63,7 +64,7 @@ export default function Navbar() {
                     </div>
 
                     <nav className="flex flex-col gap-2">
-                        <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-[#102a56] font-extrabold uppercase text-sm">HOME</a>
+                        <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-[#102a56] font-extrabold uppercase text-sm">HOME</Link>
                         <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">HOW TO BOOK</a>
                         <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">PRODUCTS</a>
                         <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">ABOUT US</a>

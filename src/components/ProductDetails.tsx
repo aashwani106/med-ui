@@ -121,27 +121,34 @@ export default function ProductDetails() {
                         )}
 
                         {/* Product Info Table */}
-                        <div className="mb-8 bg-[#F5F5F5] rounded-xl overflow-hidden">
-                            <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
-                                <span className="text-sm text-gray-500 font-semibold pl-2">Consume Type</span>
-                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2 uppercase">{product.consumeType}</span>
-                            </div>
-                            <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
-                                <span className="text-sm text-gray-500 font-semibold pl-2">Return Policy</span>
-                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2 uppercase">{product.returnPolicy}</span>
-                            </div>
-                            <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
-                                <span className="text-sm text-gray-500 font-semibold pl-2">Expires on or after</span>
-                                <span className="text-sm font-bold text-[#1D1D1D] text-right pr-2">{product.expiry}</span>
-                            </div>
-                            <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
-                                <span className="text-sm text-gray-500 font-semibold pl-2">Composition</span>
-                                <span className="text-sm font-bold text-[#1E4C8D] text-right pr-2 uppercase">{product.composition}</span>
-                            </div>
-                            <div className="grid grid-cols-[1.5fr_2fr] py-4 border-gray-100 items-center">
-                                <span className="text-sm text-gray-500 font-semibold pl-2">Manufacturer/Marketer</span>
-                                <span className="text-sm font-bold text-[#1E4C8D] text-right pr-2 uppercase">{product.manufacturer}</span>
-                            </div>
+                        <div className="mb-8 bg-[#F5F5F5] rounded-xl overflow-hidden px-4">
+                            {product.specs ? (
+                                Object.entries(product.specs).map(([key, value], index, arr) => (
+                                    <div
+                                        key={key}
+                                        className={`grid grid-cols-[1.5fr_2fr] py-4 items-center ${index < arr.length - 1 ? "border-b border-gray-100" : ""
+                                            }`}
+                                    >
+                                        <span className="text-sm text-gray-500 font-semibold">{key} :</span>
+                                        <span className="text-sm font-bold text-[#1D1D1D] text-right uppercase">{value as string}</span>
+                                    </div>
+                                ))
+                            ) : (
+                                <>
+                                    <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
+                                        <span className="text-sm text-gray-500 font-semibold">Consume Type</span>
+                                        <span className="text-sm font-bold text-[#1D1D1D] text-right uppercase">{product.consumeType}</span>
+                                    </div>
+                                    <div className="grid grid-cols-[1.5fr_2fr] py-4 border-b border-gray-100 items-center">
+                                        <span className="text-sm text-gray-500 font-semibold">Return Policy</span>
+                                        <span className="text-sm font-bold text-[#1D1D1D] text-right uppercase">{product.returnPolicy}</span>
+                                    </div>
+                                    <div className="grid grid-cols-[1.5fr_2fr] py-4 items-center">
+                                        <span className="text-sm text-gray-500 font-semibold">Composition</span>
+                                        <span className="text-sm font-bold text-[#1E4C8D] text-right uppercase">{product.composition}</span>
+                                    </div>
+                                </>
+                            )}
                         </div>
 
                         {/* Pricing Action */}
@@ -209,24 +216,23 @@ export default function ProductDetails() {
                     </div>
 
                     <div className="w-full">
-                        <div className="mb-10">
-                            <h2 className="text-lg font-bold text-[#1D1D1D] mb-4">About {product.name}</h2>
-                            <p className="text-sm text-gray-500 leading-relaxed whitespace-pre-line text-justify">
-                                {product.description}
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 className="text-lg font-bold text-[#1D1D1D] mb-6">Uses of {product.name}</h2>
-                            <ul className="flex flex-col gap-4">
-                                {product.uses.map((use, i) => (
-                                    <li key={i} className="text-sm text-gray-500 leading-relaxed">
-                                        <strong className="text-[#1D1D1D] mr-1">{use.title}:</strong>
-                                        {use.description}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        {product.uses && product.uses.length > 0 ? (
+                            product.uses.map((item, i) => (
+                                <div key={i} className="mb-10">
+                                    <h2 className="text-lg font-bold text-[#1D1D1D] mb-4">{item.title}</h2>
+                                    <p className="text-sm text-gray-500 leading-relaxed whitespace-pre-line text-justify">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="mb-10">
+                                <h2 className="text-lg font-bold text-[#1D1D1D] mb-4">About {product.name}</h2>
+                                <p className="text-sm text-gray-500 leading-relaxed whitespace-pre-line text-justify">
+                                    {product.description}
+                                </p>
+                            </div>
+                        )}
                     </div>
                 </div>
 
