@@ -965,6 +965,8 @@ export const trendingProducts = allProducts.slice(0, 8).map(p => ({
     name: p.name,
     usedFor: p.usage || (p.uses && p.uses[0] ? p.uses[0].description : ""),
     price: p.mrp,
+    packaging: p.packaging,
+    unitPrice: p.unitPrice,
     image: p.image
 }));
 

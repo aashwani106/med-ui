@@ -4,7 +4,7 @@ import Hero from './Hero';
 import PromoCards from './PromoCards';
 import TrendingSection from './TrendingSection';
 import RecommendedSection from './RecommendedSection';
-import BannerGrid from './BannerGrid';
+// import BannerGrid from './BannerGrid';
 import LatestNews from './LatestNews';
 import ProcessSteps from './ProcessSteps';
 import DeliveryBanner from './DeliveryBanner';
@@ -28,9 +28,9 @@ export default function Home() {
                 <RecommendedSection />
             </FadeIn>
 
-            <FadeIn delay={0.2}>
+            {/* <FadeIn delay={0.2}>
                 <BannerGrid />
-            </FadeIn>
+            </FadeIn> */}
 
             <FadeIn delay={0.2}>
                 <LatestNews />

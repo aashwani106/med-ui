@@ -54,6 +54,13 @@ export default function TrendingSection() {
                             <span className="text-xs text-gray-500 font-medium">{product.usedFor}</span>
                             <h3 className="text-lg font-bold text-gray-900">{product.name}</h3>
                             <span className="text-lg font-bold text-[#0ea5e9]">{product.price}</span>
+                            <div className="flex items-center gap-2 text-[11px] font-medium text-gray-500">
+                                <span>{product.packaging}</span>
+                                <span className="text-gray-300">•</span>
+                                <span>{product.unitPrice}</span>
+                                <span className="text-gray-300">•</span>
+                                <span>(Inclusive of all Taxes)</span>
+                            </div>
                         </div>
                     </FadeIn>
                 ))}
