@@ -1,4 +1,6 @@
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import FadeIn from './FadeIn';
 import Hero from './Hero';
 import PromoCards from './PromoCards';
@@ -10,6 +12,19 @@ import ProcessSteps from './ProcessSteps';
 import DeliveryBanner from './DeliveryBanner';
 
 export default function Home() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash !== '#how-to-book') return;
+
+        requestAnimationFrame(() => {
+            const section = document.getElementById('how-to-book');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }, [location.pathname, location.hash]);
+
     return (
         <>
             <FadeIn delay={0.1}>
@@ -36,9 +51,11 @@ export default function Home() {
                 <LatestNews />
             </FadeIn>
 
-            <FadeIn delay={0.2}>
-                <ProcessSteps />
-            </FadeIn>
+            <div id="how-to-book">
+                <FadeIn delay={0.2}>
+                    <ProcessSteps />
+                </FadeIn>
+            </div>
 
             <FadeIn delay={0.2}>
                 <DeliveryBanner />

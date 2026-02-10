@@ -17,8 +17,8 @@ export default function Navbar() {
                 {/* Navigation Links - Desktop */}
                 <nav className="hidden md:flex items-center gap-10 text-[13px] font-bold tracking-wide text-gray-800">
                     <Link to="/" className="text-[#102a56] font-extrabold hover:text-[#1e4c8d] transition-colors uppercase">HOME</Link>
-                    <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">HOW TO BOOK</a>
-                    <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">PRODUCTS</a>
+                    <Link to="/#how-to-book" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">HOW TO BOOK</Link>
+                    <Link to="/products" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">PRODUCTS</Link>
                     <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">ABOUT US</a>
                     <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">CONTACTS</a>
                 </nav>
@@ -65,8 +65,8 @@ export default function Navbar() {
 
                     <nav className="flex flex-col gap-2">
                         <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-[#102a56] font-extrabold uppercase text-sm">HOME</Link>
-                        <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">HOW TO BOOK</a>
-                        <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">PRODUCTS</a>
+                        <Link to="/#how-to-book" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">HOW TO BOOK</Link>
+                        <Link to="/products" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">PRODUCTS</Link>
                         <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">ABOUT US</a>
                         <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">CONTACTS</a>
                     </nav>
