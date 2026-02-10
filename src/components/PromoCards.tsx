@@ -1,9 +1,12 @@
 
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import garlicOil from '../assets/cards/garlic-oil.png';
 import frame9 from '../assets/cards/frame-9.png';
 
 export default function PromoCards() {
+    const navigate = useNavigate();
+
     return (
         <section className="mb-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -42,7 +45,10 @@ export default function PromoCards() {
 
                         <div className="flex items-end justify-between mt-6">
                             <span className="text-3xl font-bold text-white">30%</span>
-                            <button className="bg-white text-gray-900 text-[10px] font-bold py-2 px-4 rounded-full flex items-center gap-1 hover:bg-gray-100 transition-colors uppercase tracking-wide">
+                            <button
+                                onClick={() => navigate('/products')}
+                                className="bg-white text-gray-900 text-[10px] font-bold py-2 px-4 rounded-full flex items-center gap-1 hover:bg-gray-100 transition-colors uppercase tracking-wide"
+                            >
                                 Shop Now <ArrowRight className="w-3 h-3" />
                             </button>
                         </div>
@@ -63,7 +69,10 @@ export default function PromoCards() {
 
                         <div className="flex items-end justify-between mt-6">
                             <span className="text-3xl font-bold text-white">30%</span>
-                            <button className="bg-white text-gray-900 text-[10px] font-bold py-2 px-4 rounded-full flex items-center gap-1 hover:bg-gray-100 transition-colors uppercase tracking-wide">
+                            <button
+                                onClick={() => navigate('/products')}
+                                className="bg-white text-gray-900 text-[10px] font-bold py-2 px-4 rounded-full flex items-center gap-1 hover:bg-gray-100 transition-colors uppercase tracking-wide"
+                            >
                                 Shop Now <ArrowRight className="w-3 h-3" />
                             </button>
                         </div>

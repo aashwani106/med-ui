@@ -1,7 +1,10 @@
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import deliveryBg from '../assets/delevery.png';
 
 export default function DeliveryBanner() {
+    const navigate = useNavigate();
+
     return (
         <section className="mb-16">
             <div className="relative w-full h-[400px] rounded-[30px] overflow-hidden">
@@ -29,7 +32,10 @@ export default function DeliveryBanner() {
                             Try it for now, risk free!
                         </p>
 
-                        <button className="bg-[#383838] hover:bg-black text-white text-xs font-bold py-3.5 px-8 rounded-full flex items-center gap-2 transition-colors uppercase tracking-wider w-fit">
+                        <button
+                            onClick={() => navigate('/products')}
+                            className="bg-[#383838] hover:bg-black text-white text-xs font-bold py-3.5 px-8 rounded-full flex items-center gap-2 transition-colors uppercase tracking-wider w-fit"
+                        >
                             SHOP NOW <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>

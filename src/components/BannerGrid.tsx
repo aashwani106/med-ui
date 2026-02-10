@@ -1,8 +1,11 @@
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import banner3 from '../assets/hero/banner-3.png';
 import { bannerGridItems } from '../data/mockData';
 
 export default function BannerGrid() {
+    const navigate = useNavigate();
+
     return (
         <section className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -18,7 +21,10 @@ export default function BannerGrid() {
                         {/* <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors"></div> */}
 
                         <div className="absolute bottom-8 left-8 z-10">
-                            <button className="bg-[#2D2D2D] hover:bg-black text-white text-[10px] font-bold py-3 px-6 rounded-full flex items-center gap-2 transition-colors uppercase tracking-wider">
+                            <button
+                                onClick={() => navigate('/products')}
+                                className="bg-[#2D2D2D] hover:bg-black text-white text-[10px] font-bold py-3 px-6 rounded-full flex items-center gap-2 transition-colors uppercase tracking-wider"
+                            >
                                 SHOP NOW <ArrowRight className="w-3 h-3" />
                             </button>
                         </div>

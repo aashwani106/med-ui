@@ -957,6 +957,8 @@ export const allProducts = [
             }
         ]
     }
+
+    
 ];
 
 // Trending Section Data (Sliced from allProducts)

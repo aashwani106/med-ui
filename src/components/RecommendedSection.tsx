@@ -58,7 +58,10 @@ export default function RecommendedSection() {
                             Discount on the entire Store an Doctor's Day!
                         </p>
 
-                        <button className="bg-[#383838] text-white text-xs font-bold py-3 px-8 rounded-full flex items-center gap-2 hover:bg-black transition-colors uppercase tracking-wider">
+                        <button
+                            onClick={() => navigate('/products')}
+                            className="bg-[#383838] text-white text-xs font-bold py-3 px-8 rounded-full flex items-center gap-2 hover:bg-black transition-colors uppercase tracking-wider"
+                        >
                             SHOP NOW <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>

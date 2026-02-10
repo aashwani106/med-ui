@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { heroSlides } from '../data/mockData';
 
 export default function Hero() {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -45,10 +47,13 @@ export default function Hero() {
                 {slide.description}
               </p>
 
-              <button className={`${slide.theme === 'light'
-                ? 'bg-[#0e7664] text-white hover:bg-[#0b5c4e]'
-                : 'bg-white text-[#0e7664] hover:bg-gray-100'
-                } transition-colors px-8 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 tracking-wide group cursor-pointer`}>
+              <button
+                onClick={() => navigate('/products')}
+                className={`${slide.theme === 'light'
+                  ? 'bg-[#0e7664] text-white hover:bg-[#0b5c4e]'
+                  : 'bg-white text-[#0e7664] hover:bg-gray-100'
+                  } transition-colors px-8 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 tracking-wide group cursor-pointer`}
+              >
                 SHOP NOW
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>

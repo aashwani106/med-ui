@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
-import { trendingProducts, trendingCategories } from '../data/mockData';
+// trendingCategories 
+import { trendingProducts } from '../data/mockData';
 import FadeIn from './FadeIn';
 
 export default function TrendingSection() {
@@ -10,10 +11,10 @@ export default function TrendingSection() {
         <section className="mb-16">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
-                <h2 className="text-3xl font-bold text-gray-900">Trending this week</h2>
+                <h2 className="text-3xl font-bold text-gray-900">All Products                </h2>
 
                 <div className="flex items-center gap-8 flex-1 justify-end">
-                    <div className="flex items-center gap-2   ">
+                    {/* <div className="flex items-center gap-2   ">
                         {trendingCategories.map((cat, index) => (
                             <button
                                 key={index}
@@ -25,7 +26,7 @@ export default function TrendingSection() {
                                 {cat}
                             </button>
                         ))}
-                    </div>
+                    </div> */}
 
                     <Link to="/products" className="flex items-center gap-1 text-xs font-bold text-gray-600 hover:text-gray-900 uppercase tracking-wider whitespace-nowrap">
                         View All <ArrowRight className="w-4 h-4" />
