@@ -8,29 +8,29 @@ export default function Navbar() {
 
     return (
         <header className="w-full bg-white relative z-[100]">
-            <div className="w-full bg-white py-1 px-4 md:px-16 flex items-center justify-between">
+            <div className="mx-auto w-full max-w-[1600px] bg-white py-3 md:py-4 px-4 md:px-10 lg:px-14 flex items-center justify-between gap-4">
                 {/* Logo Section */}
                 <Link to="/" className="flex items-center cursor-pointer">
-                    <img src={mainLogo} alt="MediMarket Logo" className="h-10 w-auto object-contain" />
+                    <img src={mainLogo} alt="MediMarket Logo" className="h-11 md:h-13 lg:h-14 w-auto object-contain" />
                 </Link>
 
                 {/* Navigation Links - Desktop */}
-                <nav className="hidden md:flex items-center gap-10 text-[13px] font-bold tracking-wide text-gray-800">
+                <nav className="hidden md:flex items-center gap-6 lg:gap-9 text-sm lg:text-[15px] font-semibold tracking-wide text-gray-800 whitespace-nowrap">
                     <Link to="/" className="text-[#102a56] font-extrabold hover:text-[#1e4c8d] transition-colors uppercase">HOME</Link>
                     <Link to="/#how-to-book" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">HOW TO BOOK</Link>
                     <Link to="/products" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">PRODUCTS</Link>
-                    <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">ABOUT US</a>
+                    <Link to="/about" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">ABOUT US</Link>
                     <a href="#" className="hover:text-[#1e4c8d] transition-colors uppercase font-medium text-gray-600">CONTACTS</a>
                 </nav>
 
                 {/* Right Side: Search & CTA */}
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden md:flex items-center gap-3 lg:gap-5">
                     {/* Search Bar */}
                     <div className="relative">
                         <input
                             type="text"
                             placeholder="Search"
-                            className="pl-5 pr-12 py-2.5 rounded-full border border-gray-200 bg-white text-sm w-56 focus:outline-none focus:border-[#1e4c8d] focus:ring-1 focus:ring-[#1e4c8d] placeholder-gray-300 font-light shadow-sm"
+                            className="pl-5 pr-12 py-2.5 rounded-full border border-gray-200 bg-white text-sm w-44 lg:w-52 xl:w-60 focus:outline-none focus:border-[#1e4c8d] focus:ring-1 focus:ring-[#1e4c8d] placeholder-gray-300 font-light shadow-sm"
                         />
                         <Search className="w-4 h-4 text-gray-300 absolute right-4 top-1/2 -translate-y-1/2" />
                     </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
                         <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-[#102a56] font-extrabold uppercase text-sm">HOME</Link>
                         <Link to="/#how-to-book" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">HOW TO BOOK</Link>
                         <Link to="/products" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">PRODUCTS</Link>
-                        <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">ABOUT US</a>
+                        <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">ABOUT US</Link>
                         <a href="#" className="p-3 hover:bg-gray-50 rounded-lg text-gray-600 font-medium uppercase text-sm">CONTACTS</a>
                     </nav>
 
