@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { allProducts } from '../data/mockData';
 import FadeIn from './FadeIn';
 import ProcessSteps from './ProcessSteps';
@@ -7,12 +7,37 @@ import DeliveryBanner from './DeliveryBanner';
 
 export default function AllProducts() {
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
     const [currentPage, setCurrentPage] = useState(1);
+    const searchQuery = (searchParams.get('search') || '').trim().toLowerCase();
+
+    const filteredProducts = useMemo(() => {
+        if (!searchQuery) return allProducts;
+
+        return allProducts.filter((product) => {
+            const searchable = [
+                product.name,
+                product.id,
+                product.usage,
+                product.composition,
+                product.description
+            ]
+                .filter(Boolean)
+                .join(' ')
+                .toLowerCase();
+
+            return searchable.includes(searchQuery);
+        });
+    }, [searchQuery]);
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [searchQuery]);
 
     const productsPerPage = 12;
-    const totalPages = Math.max(1, Math.ceil(allProducts.length / productsPerPage));
+    const totalPages = Math.max(1, Math.ceil(filteredProducts.length / productsPerPage));
     const startIndex = (currentPage - 1) * productsPerPage;
-    const currentProducts = allProducts.slice(startIndex, startIndex + productsPerPage);
+    const currentProducts = filteredProducts.slice(startIndex, startIndex + productsPerPage);
 
     return (
         <>
@@ -22,6 +47,11 @@ export default function AllProducts() {
                 <p className="text-gray-500 mt-2">Browse our full collection of medicines and health products</p>
             </div>
 
+            {filteredProducts.length === 0 ? (
+                <div className="rounded-2xl border border-gray-200 bg-white p-10 text-center text-gray-500">
+                    No medicines found for "{searchParams.get('search')}".
+                </div>
+            ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {currentProducts.map((product, index) => (
                     <FadeIn
@@ -55,7 +85,9 @@ export default function AllProducts() {
                     </FadeIn>
                 ))}
             </div>
+            )}
 
+            {filteredProducts.length > 0 && (
             <div className="mt-10 flex items-center justify-center gap-2">
                 <button
                     onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
@@ -86,6 +118,7 @@ export default function AllProducts() {
                     Next
                 </button>
             </div>
+            )}
         </div>
 
         <FadeIn delay={0.2}>

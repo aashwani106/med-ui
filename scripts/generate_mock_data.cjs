@@ -61,7 +61,7 @@ export const heroSlides = [
     {
         id: 2,
         preTitle: "Todays Hot Offer",
-        title: "Unlock 50% Off on Essential Medicines!",
+        title: "Unlock Best Offer on Essential Medicines!",
         description: "Embrace wellness without breaking the bank! Enjoy a generous 25% discount on a wide range of vital medicines at our online pharmacy. Your health matters, and so does your budget.",
         image: banner2,
         isOffer: true,

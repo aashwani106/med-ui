@@ -5,6 +5,7 @@ import { processSteps } from '../data/mockData';
 export default function ProcessSteps() {
     return (
         <section className="mb-16">
+            <h2 className="text-3xl font-bold text-[#2D2D2D] mb-6">How to book</h2>
             <div className="bg-white rounded-[40px] border border-gray-100 p-12 shadow-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {processSteps.map((step, index) => (

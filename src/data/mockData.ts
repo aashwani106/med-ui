@@ -31,7 +31,7 @@ export const heroSlides = [
     {
         id: 2,
         preTitle: "Todays Hot Offer",
-        title: "Unlock 50% Off on Essential Medicines!",
+        title: "Unlock Best Offer on Essential Medicines!",
         description: "Embrace wellness without breaking the bank! Enjoy a generous 25% discount on a wide range of vital medicines at our online pharmacy. Your health matters, and so does your budget.",
         image: banner2,
         isOffer: true,
@@ -63,7 +63,7 @@ export const categories = [
 export const allProducts = [
     {
         "id": "belbien-10-mg",
-        "name": "Belbien 10 mg",
+        "name": "Zolpidem (Belbien) 10mg",
         "metaTitle": "Buy Belbien 10 mg Online | Price $749 | Trusted Pharmacy",
         "metaDescription": "Buy Belbien 10 mg online at best price $749. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -85,7 +85,7 @@ export const allProducts = [
         "expiry": "2 Year",
         "composition": "Zolpidem Tartrate",
         "manufacturer": "PHARMACEUTICALS LTD",
-        "mrp": "$749",
+        "mrp": "$850",
         "packaging": "180 Units",
         "unitPrice": "$4.16/unit",
         "usage": "Insomnia",
@@ -109,9 +109,11 @@ export const allProducts = [
             }
         ]
     },
+
+    
     {
         "id": "zolpidem-10-mg",
-        "name": "Zolpidem 10 mg",
+        "name": "Zolpidem (ambien) 10mg",
         "metaTitle": "Buy Zolpidem 10 mg Online | Price $599 | Trusted Pharmacy",
         "metaDescription": "Buy Zolpidem 10 mg online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -161,9 +163,11 @@ export const allProducts = [
             }
         ]
     },
+
+
     {
         "id": "rivotril-2-mg",
-        "name": "Rivotril 2 mg",
+        "name": "Rivotril (Clonazepam) 2mg",
         "metaTitle": "Buy Rivotril 2 mg Online | Price $799 | Trusted Pharmacy",
         "metaDescription": "Buy Rivotril 2 mg online at best price $799. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -221,6 +225,8 @@ export const allProducts = [
             }
         ]
     },
+
+
     {
         "id": "alprazolam-1-mg",
         "name": "Alprazolam (xanax)-1 mg",
@@ -273,6 +279,8 @@ export const allProducts = [
             }
         ]
     },
+
+
     {
         "id": "alprazolam-2-mg",
         "name": "Alprazolam (xanax)- 2mg",
@@ -297,7 +305,7 @@ export const allProducts = [
         "expiry": "2 Year",
         "composition": "Alprazolam",
         "manufacturer": "PHARMACEUTICALS LTD",
-        "mrp": "$799",
+        "mrp": "$899",
         "packaging": "180 Units",
         "unitPrice": "$4.16/unit",
         "usage": "Anxiety, panic disorder",
@@ -325,9 +333,11 @@ export const allProducts = [
             }
         ]
     },
+
+
     {
         "id": "valium-10-mg",
-        "name": "valium (diazepam) - 10mg",
+        "name": "Diazepam (valium-Martin Dow) - 10mg",
         "metaTitle": "Buy valium (diazepam) - 10mg Online | Price $899 | Trusted Pharmacy",
         "metaDescription": "Buy valium (diazepam) - 10mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -389,9 +399,11 @@ export const allProducts = [
             }
         ]
     },
+
+
     {
         "id": "tramadol-citra-100-mg",
-        "name": "Tramadol Citra 100 mg",
+        "name": "Tramadol (Citra) 100 mg",
         "metaTitle": "Buy Tramadol Citra 100 mg Online | Price $499 | Trusted Pharmacy",
         "metaDescription": "Buy Tramadol Citra 100 mg online at best price $499. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -449,6 +461,7 @@ export const allProducts = [
             }
         ]
     },
+
     {
         "id": "tramadol-trakem-100-mg",
         "name": "Tramadol Trakem 100 mg",
@@ -559,7 +572,7 @@ export const allProducts = [
     },
     {
         "id": "ritalin-30-mg",
-        "name": "Ritalin 30 mg",
+        "name": "Ritalin (Adderal) 30mg",
         "metaTitle": "Buy Ritalin 30 mg Online | Price $899 | Trusted Pharmacy",
         "metaDescription": "Buy Ritalin 30 mg online at best price $899. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -619,7 +632,7 @@ export const allProducts = [
     },
     {
         "id": "tapentadol-100-mg",
-        "name": "Tapentadol (Aspadol-100mg)",
+        "name": "Tapentadol (Aspadol)-100mg",
         "metaTitle": "Buy Tapentadol (Aspadol-100mg) Online | Price $599 | Trusted Pharmacy",
         "metaDescription": "Buy Tapentadol (Aspadol-100mg) online at best price $599. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -641,7 +654,7 @@ export const allProducts = [
         "expiry": "2 Year",
         "composition": "TAPENTADOL",
         "manufacturer": "PHARMACEUTICALS LTD",
-        "mrp": "$599",
+        "mrp": "$699",
         "packaging": "180 Tablet",
         "unitPrice": "$3.32/unit",
         "usage": "Pain relief",
@@ -791,7 +804,7 @@ export const allProducts = [
     },
     {
         "id": "ativan",
-        "name": "ATIVAN (LOREZAPAM)",
+        "name": "Lorezapam (Ativan) 2MG",
         "metaTitle": "Buy ATIVAN (LOREZAPAM) Online | Price $699 | Trusted Pharmacy",
         "metaDescription": "Buy ATIVAN (LOREZAPAM) online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [
@@ -855,7 +868,7 @@ export const allProducts = [
     },
     {
         "id": "soma-350-mg",
-        "name": "SOMA 350MG",
+        "name": "Carisoprodol (soma) 350mg/500MG",
         "metaTitle": "Buy SOMA 350MG Online | Price $699 | Trusted Pharmacy",
         "metaDescription": "Buy SOMA 350MG online at best price $699. Trusted prescription medicine for safe and effective treatment. Discreet shipping available.",
         "breadcrumbs": [

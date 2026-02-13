@@ -3,11 +3,10 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import FadeIn from './FadeIn';
 import Hero from './Hero';
-import PromoCards from './PromoCards';
 import TrendingSection from './TrendingSection';
 import RecommendedSection from './RecommendedSection';
 // import BannerGrid from './BannerGrid';
-import LatestNews from './LatestNews';
+// import LatestNews from './LatestNews';
 import ProcessSteps from './ProcessSteps';
 import DeliveryBanner from './DeliveryBanner';
 
@@ -31,9 +30,9 @@ export default function Home() {
                 <Hero />
             </FadeIn>
 
-            <FadeIn delay={0.2}>
+            {/* <FadeIn delay={0.2}>
                 <PromoCards />
-            </FadeIn>
+            </FadeIn> */}
 
             <FadeIn delay={0.2}>
                 <TrendingSection />
@@ -47,9 +46,9 @@ export default function Home() {
                 <BannerGrid />
             </FadeIn> */}
 
-            <FadeIn delay={0.2}>
+            {/* <FadeIn delay={0.2}>
                 <LatestNews />
-            </FadeIn>
+            </FadeIn> */}
 
             <div id="how-to-book">
                 <FadeIn delay={0.2}>

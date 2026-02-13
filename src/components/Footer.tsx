@@ -32,10 +32,10 @@ export default function Footer() {
                     <div>
                         <h4 className="text-sm font-bold uppercase tracking-[0.11em] text-[#1e4c8d]">Policies</h4>
                         <div className="mt-2.5 flex flex-col gap-1.5 text-[16px] font-semibold text-[#2f3b4a]">
-                            <a href="#" className="hover:text-[#1e4c8d]">Privacy Policy</a>
-                            <a href="#" className="hover:text-[#1e4c8d]">Terms and Conditions</a>
-                            <a href="#" className="hover:text-[#1e4c8d]">Return Policy</a>
-                            <a href="#" className="hover:text-[#1e4c8d]">Customer Support Policy</a>
+                            <Link to="/privacy-policy" className="hover:text-[#1e4c8d]">Privacy Policy</Link>
+                            <Link to="/terms-and-conditions" className="hover:text-[#1e4c8d]">Terms and Conditions</Link>
+                            <Link to="/return-refund-policy" className="hover:text-[#1e4c8d]">Return Policy</Link>
+                            {/* <a href="#" className="hover:text-[#1e4c8d]">Customer Support Policy</a> */}
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
                         <div className="mt-2.5 space-y-2.5 text-[16px] text-[#2f3b4a]">
                             <div>
                                 <p>Contact Number:</p>
-                                <a href="tel:+13468200015" className="mt-0.5 inline-flex items-center gap-2 font-semibold hover:text-[#1e4c8d]">
+                                <a href="https://wa.me/13468200015" target="_blank" rel="noopener noreferrer" className="mt-0.5 inline-flex items-center gap-2 font-semibold hover:text-[#1e4c8d]">
                                     <MessageCircle className="h-4 w-4 text-[#22c55e]" />
                                     +1 346 820 0015
                                 </a>
@@ -62,7 +62,7 @@ export default function Footer() {
 
                 <div className="flex flex-col gap-4 pt-4 md:flex-row md:items-center md:justify-between">
                     <p className="text-xs text-[#425062]">
-                        Privacy Policy / Medi market USA © 2026 / All Rights Reserved
+                        <Link to="/privacy-policy" className="hover:text-[#1e4c8d]">Privacy Policy</Link> / Medi market USA © 2026 / All Rights Reserved
                     </p>
 
                     <div className="flex flex-wrap items-center gap-2.5 text-sm font-bold">
