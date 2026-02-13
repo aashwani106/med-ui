@@ -8,7 +8,7 @@ export default function RecommendedSection() {
     const navigate = useNavigate();
 
     return (
-        <section className="mb-16 py-12 bg-[#FFF8F3] -mx-4 md:-mx-16 px-4 md:px-16 rounded-[40px]">
+        <section className="mb-16 py-12  -mx-4 md:-mx-16 px-4 md:px-16 rounded-[40px]">
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
                 <h2 className="text-3xl font-bold text-[#2D2D2D]">Recommended For You</h2>

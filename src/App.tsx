@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <ScrollToTopComp />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen">
         <div className="sticky top-0 z-50 bg-white shadow-xl">
           <Navbar />
           {/* <CategoryBar /> */}

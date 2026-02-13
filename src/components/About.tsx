@@ -8,8 +8,8 @@ export default function About() {
     return (
         <div className="py-8 md:py-10">
             <FadeIn>
-                <section className="bg-[#068b80] px-5 py-8 md:px-10 md:py-12 lg:px-14">
-                <div className="mx-auto grid w-full max-w-[1450px] grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
+                <section className="bg-[#068b80] px-5 rounded-[30px] py-8 md:px-10 md:py-12 lg:px-14">
+                <div className="mx-auto  grid w-full max-w-[1450px] grid-cols-1 items-center gap-8 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
                     <FadeIn className="max-w-[690px]" delay={0.05}>
                         <h1 className="text-[48px] font-bold leading-[1.1] text-white sm:text-[56px] lg:text-[64px]">
                             Caring for Your Health, One Order at a Time
@@ -20,7 +20,7 @@ export default function About() {
                         <div className="mt-7 flex flex-wrap gap-3">
                             <Link
                                 to="/products"
-                                className="rounded-md bg-white px-6 py-2.5 text-sm font-medium text-[#0b655e] transition-colors hover:bg-white/90"
+                                className="rounded-md  bg-white px-6 py-2.5 text-sm font-medium text-[#0b655e] transition-colors hover:bg-white/90"
                             >
                                 Shop Now
                             </Link>
@@ -45,7 +45,7 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-                <section className="bg-[#f4f7f9] px-5 py-10 md:px-10 md:py-12 lg:px-14">
+                <section className=" px-5 py-10 md:px-10 md:py-12 lg:px-14">
                 <div className="mx-auto grid w-full max-w-[1450px] grid-cols-1 items-center gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
                     <FadeIn delay={0.05} direction="right">
                         <img
@@ -56,7 +56,7 @@ export default function About() {
                     </FadeIn>
 
                     <FadeIn className="max-w-[680px]" delay={0.12}>
-                        <span className="inline-flex items-center rounded-full bg-[#b6f3e9] px-3 py-1 text-[11px] font-semibold text-[#0c7f73]">
+                        <span className="inline-flex items-center rounded-full  px-3 py-1 text-[11px] font-semibold text-[#0c7f73]">
                             Who We Are
                         </span>
                         <h2 className="mt-4 text-4xl font-bold text-[#1d2734] lg:text-5xl">About MediMarket USA</h2>
@@ -72,7 +72,7 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.15}>
-                <section className="bg-[#eaf2f7] px-5 py-14 text-center md:px-10 md:py-16 lg:px-14">
+                <section className=" px-5 py-14 text-center md:px-10 md:py-16 lg:px-14">
                 <FadeIn className="mx-auto max-w-[980px]" delay={0.05}>
                     <span className="inline-flex items-center rounded-full bg-[#d5e8ff] px-3 py-1 text-[11px] font-semibold text-[#315c97]">
                     💙 Our Mission
@@ -86,7 +86,7 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-                <section className="bg-[#f6f8fa] px-5 py-14 md:px-10 md:py-16 lg:px-14">
+                <section className=" px-5 py-14 md:px-10 md:py-16 lg:px-14">
                 <div className="mx-auto w-full max-w-[1100px]">
                     <FadeIn className="text-center" delay={0.04}>
                         <span className="inline-flex items-center rounded-full bg-[#b8efe5] px-4 py-1.5 text-xs font-semibold text-[#0f7f73]">
