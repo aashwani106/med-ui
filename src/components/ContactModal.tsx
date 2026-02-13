@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface ContactModalProps {
     isOpen: boolean;
@@ -17,7 +18,7 @@ export default function ContactModal({ isOpen, onClose, productName = "Brufen 60
     const [address, setAddress] = useState('');
     const [quantity, setQuantity] = useState('5');
     const [message, setMessage] = useState('');
-    const [agreed, setAgreed] = useState(false);
+    const [agreed, setAgreed] = useState(true);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -204,7 +205,7 @@ export default function ContactModal({ isOpen, onClose, productName = "Brufen 60
                                     className="mt-1 w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                 />
                                 <label htmlFor="privacy" className="text-sm text-gray-600 cursor-pointer">
-                                    You agree to our friendly <a href="#" className="underline decoration-gray-400 underline-offset-2 hover:text-gray-900">privacy policy</a>.
+                                    You agree to our friendly <Link to="/privacy-policy" className="underline decoration-gray-400 underline-offset-2 hover:text-gray-900">privacy policy</Link>.
                                 </label>
                             </div>
 
