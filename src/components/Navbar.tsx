@@ -120,13 +120,25 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-gray-700 p-2"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                </button>
+                {/* Mobile Right Actions */}
+                <div className="md:hidden flex items-center gap-2">
+                    <a
+                        href="https://wa.me/13468200015"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full"
+                        aria-label="WhatsApp"
+                    >
+                        <img src={whatsappIcon} alt="WhatsApp" className="h-8 w-8 object-contain" />
+                    </a>
+
+                    <button
+                        className="text-gray-700 p-2"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu Overlay */}
